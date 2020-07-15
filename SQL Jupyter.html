@@ -11794,13 +11794,13 @@ div#notebook {
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">VIP\Desktop&quot;</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">&quot;C:</span><span class="se">\\</span><span class="s2">Users</span><span class="se">\\</span><span class="s2">VIP\Desktop\github projects&quot;</span><span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">sqlalchemy</span>
 <span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
 
-<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite://&#39;</span><span class="p">,</span> <span class="n">echo</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite://&#39;</span><span class="p">,</span> <span class="n">echo</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">pool_recycle</span><span class="o">=</span><span class="mi">3600</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12039,7 +12039,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="SQL-for-ETL-processes">SQL for ETL processes<a class="anchor-link" href="#SQL-for-ETL-processes">&#182;</a></h1><h1 id="1)-&quot;Where&quot;---clause-to-filter-data">1) "Where" - clause to filter data<a class="anchor-link" href="#1)-&quot;Where&quot;---clause-to-filter-data">&#182;</a></h1><h2 id="Show-only-female-datapoints">Show only female datapoints<a class="anchor-link" href="#Show-only-female-datapoints">&#182;</a></h2>
+<h1 id="SQL-for-ETL-processes">SQL for ETL processes<a class="anchor-link" href="#SQL-for-ETL-processes">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1)-&quot;Where&quot;---clause-to-filter-data">1) "Where" - clause to filter data<a class="anchor-link" href="#1)-&quot;Where&quot;---clause-to-filter-data">&#182;</a></h2><h3 id="Show-only-female-datapoints">Show only female datapoints<a class="anchor-link" href="#Show-only-female-datapoints">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12168,7 +12176,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="2)-&quot;Group-by&quot;---clause-to-show-avg-or-count-to-aggregate-data">2) "Group by" - clause to show avg or count to aggregate data<a class="anchor-link" href="#2)-&quot;Group-by&quot;---clause-to-show-avg-or-count-to-aggregate-data">&#182;</a></h1><h2 id="show-average-charges-per-region">show average charges per region<a class="anchor-link" href="#show-average-charges-per-region">&#182;</a></h2>
+<h2 id="2)-&quot;Group-by&quot;---clause-to-show-avg-or-count-to-aggregate-data">2) "Group by" - clause to show avg or count to aggregate data<a class="anchor-link" href="#2)-&quot;Group-by&quot;---clause-to-show-avg-or-count-to-aggregate-data">&#182;</a></h2><h3 id="show-average-charges-per-region">show average charges per region<a class="anchor-link" href="#show-average-charges-per-region">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12255,7 +12263,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3)-&quot;Group-by&quot;-clause-with-&quot;Having&quot;-to-filter-data-after-aggregation">3) "Group by" clause with "Having" to filter data after aggregation<a class="anchor-link" href="#3)-&quot;Group-by&quot;-clause-with-&quot;Having&quot;-to-filter-data-after-aggregation">&#182;</a></h1><h2 id="show-average-of-charges-grouped-by-region-only-showing-southwest-region">show average of charges grouped by region only showing southwest region<a class="anchor-link" href="#show-average-of-charges-grouped-by-region-only-showing-southwest-region">&#182;</a></h2><h3 id="Note:-no-&quot;where&quot;-when-using-&quot;group-by&quot;!">Note: no "where" when using "group by"!<a class="anchor-link" href="#Note:-no-&quot;where&quot;-when-using-&quot;group-by&quot;!">&#182;</a></h3>
+<h2 id="3)-&quot;Group-by&quot;-clause-with-&quot;Having&quot;-to-filter-data-after-aggregation">3) "Group by" clause with "Having" to filter data after aggregation<a class="anchor-link" href="#3)-&quot;Group-by&quot;-clause-with-&quot;Having&quot;-to-filter-data-after-aggregation">&#182;</a></h2><h3 id="show-average-of-charges-grouped-by-region-only-showing-southwest-region">show average of charges grouped by region only showing southwest region<a class="anchor-link" href="#show-average-of-charges-grouped-by-region-only-showing-southwest-region">&#182;</a></h3><h4 id="Note:-no-&quot;where&quot;-when-using-&quot;group-by&quot;!">Note: no "where" when using "group by"!<a class="anchor-link" href="#Note:-no-&quot;where&quot;-when-using-&quot;group-by&quot;!">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12327,7 +12335,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="4)-Join-data-to-combine-multiple-tables-via-unique-identifier-(primary-key)">4) Join data to combine multiple tables via unique identifier (primary key)<a class="anchor-link" href="#4)-Join-data-to-combine-multiple-tables-via-unique-identifier-(primary-key)">&#182;</a></h1>
+<h2 id="4)-Join-data-to-combine-multiple-tables-via-unique-identifier-(primary-key)">4) Join data to combine multiple tables via unique identifier (primary key)<a class="anchor-link" href="#4)-Join-data-to-combine-multiple-tables-via-unique-identifier-(primary-key)">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -12461,7 +12469,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="5)-&quot;Rank()-over&quot;-to-show---surprise---ranking-of-values">5) "Rank() over" to show - surprise - ranking of values<a class="anchor-link" href="#5)-&quot;Rank()-over&quot;-to-show---surprise---ranking-of-values">&#182;</a></h1><h2 id="creating-a-new-column-&quot;ranking&quot;-based-on-charges-from-high-to-low-(desc)">creating a new column "ranking" based on charges from high to low (desc)<a class="anchor-link" href="#creating-a-new-column-&quot;ranking&quot;-based-on-charges-from-high-to-low-(desc)">&#182;</a></h2>
+<h2 id="5)-&quot;Rank()-over&quot;-to-show---surprise---ranking-of-values">5) "Rank() over" to show - surprise - ranking of values<a class="anchor-link" href="#5)-&quot;Rank()-over&quot;-to-show---surprise---ranking-of-values">&#182;</a></h2><h3 id="creating-a-new-column-&quot;ranking&quot;-based-on-charges-from-high-to-low-(desc)">creating a new column "ranking" based on charges from high to low (desc)<a class="anchor-link" href="#creating-a-new-column-&quot;ranking&quot;-based-on-charges-from-high-to-low-(desc)">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12470,7 +12478,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT *, rank() over (order by charges desc)ranking</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT *, rank() over (order by charges desc) Ranking</span>
 <span class="s2">               from bills</span>
 <span class="s2">               limit 5&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
 </pre></div>
@@ -12511,7 +12519,7 @@ div#notebook {
       <th>id</th>
       <th>region</th>
       <th>charges</th>
-      <th>ranking</th>
+      <th>Ranking</th>
     </tr>
   </thead>
   <tbody>
@@ -12565,7 +12573,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="6)-&quot;Partition-by&quot;-to-show-avg-or-count-to-aggregate-data">6) "Partition by" to show avg or count to aggregate data<a class="anchor-link" href="#6)-&quot;Partition-by&quot;-to-show-avg-or-count-to-aggregate-data">&#182;</a></h1><h2 id="similar-to-group-by-but-all-values-will-be-shown,-not-only-the-groups">similar to group by but all values will be shown, not only the groups<a class="anchor-link" href="#similar-to-group-by-but-all-values-will-be-shown,-not-only-the-groups">&#182;</a></h2><h3 id="we-are-ranking-not-the-whole-dataset,-but-for-every-region-we-create-an-individual-ranking">we are ranking not the whole dataset, but for every region we create an individual ranking<a class="anchor-link" href="#we-are-ranking-not-the-whole-dataset,-but-for-every-region-we-create-an-individual-ranking">&#182;</a></h3>
+<h2 id="6)-&quot;Partition-by&quot;-to-perform-calculations-on-groups-(like-avg-or-count-etc.)">6) "Partition by" to perform calculations on groups (like avg or count etc.)<a class="anchor-link" href="#6)-&quot;Partition-by&quot;-to-perform-calculations-on-groups-(like-avg-or-count-etc.)">&#182;</a></h2><h3 id="similar-to-group-by-but-all-values-will-be-shown,-not-only-the-groups">similar to group by but all values will be shown, not only the groups<a class="anchor-link" href="#similar-to-group-by-but-all-values-will-be-shown,-not-only-the-groups">&#182;</a></h3><h4 id="we-are-ranking-not-the-whole-dataset,-but-for-every-region-we-create-an-individual-ranking">we are ranking not the whole dataset, but for every region we create an individual ranking<a class="anchor-link" href="#we-are-ranking-not-the-whole-dataset,-but-for-every-region-we-create-an-individual-ranking">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12574,8 +12582,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT *, rank() over (partition by region order by charges desc)as Ranking</span>
-<span class="s2">               from bills&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT *, rank() over (partition by region order by charges desc) as Ranking </span>
+<span class="s2">                from bills&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13061,7 +13069,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="8)-&quot;like&quot;-operator">8) "like" operator<a class="anchor-link" href="#8)-&quot;like&quot;-operator">&#182;</a></h1><h2 id="show-only-regions-that-contain-&quot;north&quot;,-helpful-if-you-have-a-large-database-of-customers-and-you-only-want-to-filter-for-names-starting-with-the-same-letter.-&quot;Like&quot;-operator-functions-with-wildcards-like-&quot;%&quot;-(for-any-amount-of-letters,-digits-etc.)-or-&quot;_&quot;-for-just-a-single-one">show only regions that contain "north", helpful if you have a large database of customers and you only want to filter for names starting with the same letter. "Like" operator functions with wildcards like "%" (for any amount of letters, digits etc.) or "_" for just a single one<a class="anchor-link" href="#show-only-regions-that-contain-&quot;north&quot;,-helpful-if-you-have-a-large-database-of-customers-and-you-only-want-to-filter-for-names-starting-with-the-same-letter.-&quot;Like&quot;-operator-functions-with-wildcards-like-&quot;%&quot;-(for-any-amount-of-letters,-digits-etc.)-or-&quot;_&quot;-for-just-a-single-one">&#182;</a></h2><h3 id="Note:-in-our-case-we-can-also-use-a-&quot;having&quot;-statement-as-we-only-have-two-regions-that-contain-&quot;north&quot;">Note: in our case we can also use a "having" statement as we only have two regions that contain "north"<a class="anchor-link" href="#Note:-in-our-case-we-can-also-use-a-&quot;having&quot;-statement-as-we-only-have-two-regions-that-contain-&quot;north&quot;">&#182;</a></h3>
+<h2 id="8)-&quot;like&quot;-operator">8) "like" operator<a class="anchor-link" href="#8)-&quot;like&quot;-operator">&#182;</a></h2><h3 id="show-only-regions-that-contain-&quot;north&quot;,-helpful-if-you-have-a-large-database-of-customers-and-you-only-want-to-filter-for-names-starting-with-the-same-letter.-&quot;Like&quot;-operator-functions-with-wildcards-like-&quot;%&quot;-(for-any-amount-of-letters,-digits-etc.)-or-&quot;_&quot;-for-just-a-single-one">show only regions that contain "north", helpful if you have a large database of customers and you only want to filter for names starting with the same letter. "Like" operator functions with wildcards like "%" (for any amount of letters, digits etc.) or "_" for just a single one<a class="anchor-link" href="#show-only-regions-that-contain-&quot;north&quot;,-helpful-if-you-have-a-large-database-of-customers-and-you-only-want-to-filter-for-names-starting-with-the-same-letter.-&quot;Like&quot;-operator-functions-with-wildcards-like-&quot;%&quot;-(for-any-amount-of-letters,-digits-etc.)-or-&quot;_&quot;-for-just-a-single-one">&#182;</a></h3><h4 id="Note:-in-our-case-we-can-also-use-a-&quot;having&quot;-statement-as-we-only-have-two-regions-that-contain-&quot;north&quot;">Note: in our case we can also use a "having" statement as we only have two regions that contain "north"<a class="anchor-link" href="#Note:-in-our-case-we-can-also-use-a-&quot;having&quot;-statement-as-we-only-have-two-regions-that-contain-&quot;north&quot;">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13217,7 +13225,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="8)-Percentage:-Share-of-groups">8) Percentage: Share of groups<a class="anchor-link" href="#8)-Percentage:-Share-of-groups">&#182;</a></h1><h2 id="Are-the-regions-represented-evenly,-i.e.-do-we-have-same-amount-of-datapoints-for-every-region?">Are the regions represented evenly, i.e. do we have same amount of datapoints for every region?<a class="anchor-link" href="#Are-the-regions-represented-evenly,-i.e.-do-we-have-same-amount-of-datapoints-for-every-region?">&#182;</a></h2>
+<h2 id="9)-Percentage:-Share-of-regions-(based-on-#-of-ids,-i.e.-rows)">9) Percentage: Share of regions (based on # of ids, i.e. rows)<a class="anchor-link" href="#9)-Percentage:-Share-of-regions-(based-on-#-of-ids,-i.e.-rows)">&#182;</a></h2><h3 id="Are-the-regions-represented-evenly,-i.e.-do-we-have-same-amount-of-datapoints-for-every-region?">Are the regions represented evenly, i.e. do we have same amount of datapoints for every region?<a class="anchor-link" href="#Are-the-regions-represented-evenly,-i.e.-do-we-have-same-amount-of-datapoints-for-every-region?">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13304,7 +13312,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="9)-Percentage:-Share-of-groups--">9) Percentage: Share of groups -<a class="anchor-link" href="#9)-Percentage:-Share-of-groups--">&#182;</a></h1><h2 id="How-much-does-any-region-contribute-to-the-total-charges?">How much does any region contribute to the total charges?<a class="anchor-link" href="#How-much-does-any-region-contribute-to-the-total-charges?">&#182;</a></h2>
+<h2 id="10)-Percentage:-Share-of-regions-(based-on-sum-of-charges)">10) Percentage: Share of regions (based on sum of charges)<a class="anchor-link" href="#10)-Percentage:-Share-of-regions-(based-on-sum-of-charges)">&#182;</a></h2><h3 id="How-much-does-any-region-contribute-to-the-total-charges?">How much does any region contribute to the total charges?<a class="anchor-link" href="#How-much-does-any-region-contribute-to-the-total-charges?">&#182;</a></h3><h4 id="We-need-a-subquery-here-in-the-select-statement-to-calculate-the-share">We need a subquery here in the select statement to calculate the share<a class="anchor-link" href="#We-need-a-subquery-here-in-the-select-statement-to-calculate-the-share">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13380,6 +13388,105 @@ div#notebook {
       <td>southwest</td>
       <td>4.012755e+06</td>
       <td>0.225997</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="11)-Ranking-of-regions-based-on-share-of-charges">11) Ranking of regions based on share of charges<a class="anchor-link" href="#11)-Ranking-of-regions-based-on-share-of-charges">&#182;</a></h2><h3 id="like-10)---but-now-we-rank-them-based-on-share-and-need-an-additional-subquery">like 10) - but now we rank them based on share and need an additional subquery<a class="anchor-link" href="#like-10)---but-now-we-rank-them-based-on-share-and-need-an-additional-subquery">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;Select *, rank() over (order by Share desc) as RankingShare</span>
+<span class="s2">                from </span>
+<span class="s2">                (Select region, sum(charges), (Sum(charges)/ (Select sum(charges) From bills)) as Share</span>
+<span class="s2">               From bills</span>
+<span class="s2">               Group By region)&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>region</th>
+      <th>sum(charges)</th>
+      <th>Share</th>
+      <th>RankingShare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>southeast</td>
+      <td>5.363690e+06</td>
+      <td>0.302081</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>northeast</td>
+      <td>4.343669e+06</td>
+      <td>0.244633</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>northwest</td>
+      <td>4.035712e+06</td>
+      <td>0.227289</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>southwest</td>
+      <td>4.012755e+06</td>
+      <td>0.225997</td>
+      <td>4</td>
     </tr>
   </tbody>
 </table>
